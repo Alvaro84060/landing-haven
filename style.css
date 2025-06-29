@@ -79,7 +79,13 @@ box-shadow: 0 8px 20px rgba(230,90,42,0.7);
 transform: translateY(-3px);
 cursor: pointer;
   } 
-  
+  .section-divider {
+  background: #1a1a1a; /* color de fondo de la sección siguiente */
+  height: 80px;
+  clip-path: ellipse(80% 100% at 50% 0%);
+  margin-top: -1px;
+}
+
 .about-solutions {
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
   background-repeat: repeat;
