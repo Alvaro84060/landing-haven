@@ -170,5 +170,14 @@ body {
   margin: 0 auto 20px;
   line-height: 1.7;
 }
+.section-background {
+  background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  padding: 100px 20px;
+  color: #1f1f1f;
+}
+
 
 
