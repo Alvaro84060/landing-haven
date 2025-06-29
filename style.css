@@ -1,73 +1,80 @@
+/* Importante: Aplica las fuentes */
+body {
+font-family: 'Lato', sans-serif;
+margin: 0;
+padding: 0;
+color: #fff;
+background-color: #111;
+}
+
 /* Hero Styles */
 .hero {
-  height: 100vh;
-  width: 100%;
-  background-image: url('https://iili.io/F53DOCP.jpg'); /* ✅ LINK DIRECTO A LA IMAGEN */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-  z-index: 1;
+height: 100vh;
+width: 100%;
+background-image: url('https://sponsor.domain.com.au/sponsor-prod/domain/uploads/2021/10/26222640/A1.2-Living-Web.jpg');
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* Overlay para contraste */
-  z-index: 0;
-}
-
+/* Overlay oscuro */
 .hero-overlay {
-  display: none; /* ya no es necesario porque usamos ::after */
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: rgba(0, 0, 0, 0.55);
+z-index: 1;
 }
 
+/* Contenido del hero */
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  color: #fff;
+position: relative;
+z-index: 2;
+max-width: 900px;
+padding: 0 20px;
 }
 
+/* Título principal */
 .hero h1 {
-  font-weight: 700;
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* 👈 Le da más presencia */
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+font-size: clamp(2.8rem, 5vw, 4.5rem);
+line-height: 1.1;
+margin-bottom: 20px;
+letter-spacing: 1px;
+text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
 }
 
+/* Subtítulo */
 .hero p {
-  font-weight: 400;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  margin-bottom: 40px;
-  opacity: 0.92;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+font-weight: 300;
+font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+margin-bottom: 40px;
+opacity: 0.95;
+text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
+/* Botón */
 .btn-primary {
-  display: inline-block;
-  padding: 18px 45px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #fff;
-  background: #ff6f3c;
-  border-radius: 40px;
-  text-decoration: none;
-  box-shadow: 0 6px 12px rgba(255, 111, 60, 0.5);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+display: inline-block;
+padding: 18px 45px;
+font-size: 1.2rem;
+font-weight: 600;
+color: #fff;
+background: #ff6f3c;
+border-radius: 40px;
+text-decoration: none;
+box-shadow: 0 6px 12px rgba(255,111,60,0.5);
+transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #e65a2a;
-  box-shadow: 0 8px 16px rgba(230, 90, 42, 0.7);
-  outline: none;
-  cursor: pointer;
-}
+background-color: #e65a2a;
+box-shadow: 0 8px 20px rgba(230,90,42,0.7);
+transform: translateY(-3px);
+cursor: pointer;
