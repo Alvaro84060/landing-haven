@@ -78,3 +78,37 @@ background-color: #e65a2a;
 box-shadow: 0 8px 20px rgba(230,90,42,0.7);
 transform: translateY(-3px);
 cursor: pointer;
+.about-solutions {
+  background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+  background-repeat: repeat;
+  background-color: #1a1a1a;
+  padding: 80px 20px;
+  color: #eee;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.about-solutions .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-solutions h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin-bottom: 24px;
+  color: #ff6f3c;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.about-solutions p {
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ddd;
+}
