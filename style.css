@@ -1,8 +1,7 @@
-/* Hero full viewport con imagen de fondo */
 .hero {
   position: relative;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center center/cover no-repeat;
+  background: url('https://customhomesonline.com.au/wp-content/uploads/2019/10/Penthouse-for-Sale-Gold-Coast.jpg') center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
