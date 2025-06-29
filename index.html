@@ -1,123 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haven Concierge | Servicios Premium para Airbnb</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Haven Concierge – Premium Airbnb Services</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="header">
-    <div class="container header__container">
-      <a href="#" class="logo">Haven Concierge</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="#services" class="nav__link">Servicios</a></li>
-          <li><a href="#about" class="nav__link">Nosotros</a></li>
-          <li><a href="#testimonials" class="nav__link">Testimonios</a></li>
-          <li><a href="#contact" class="nav__link button button--primary">Cotizar</a></li>
-        </ul>
-      </nav>
+  <header class="hero">
+    <div class="container">
+      <h1>Airbnb Management, Done Right.</h1>
+      <p>Gold Coast’s top-tier cleaning, staging & guest services – all in one.</p>
+      <a href="#plans" class="cta">View Packages</a>
     </div>
   </header>
 
-  <main>
-    <!-- Hero con background video + texto -->
-    <section class="hero" id="hero">
-      <video autoplay muted loop class="hero__video">
-        <source src="videos/cleaning.mp4" type="video/mp4" />
-      </video>
-      <div class="hero__overlay"></div>
-      <div class="container hero__content">
-        <h1 class="hero__title">Servicios premium para Airbnb en Gold Coast</h1>
-        <p class="hero__subtitle">
-          Limpieza y atención integral para que tus huéspedes vivan la mejor experiencia.
-        </p>
-        <a href="#contact" class="button button--primary hero__cta">Solicitá tu presupuesto</a>
-      </div>
-    </section>
-
-    <!-- Servicios -->
-    <section class="services" id="services">
-      <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services__grid">
-          <article class="service-card">
-            <img src="images/icon-cleaning.svg" alt="Limpieza Profesional" class="service-card__icon" />
-            <h3 class="service-card__title">Limpieza Profesional</h3>
-            <p class="service-card__desc">
-              Limpieza impecable para dejar cada rincón listo para la llegada de tus huéspedes.
-            </p>
-          </article>
-          <article class="service-card">
-            <img src="images/icon-checkin.svg" alt="Gestión de Check-in" class="service-card__icon" />
-            <h3 class="service-card__title">Gestión de Check-in</h3>
-            <p class="service-card__desc">
-              Coordinamos la recepción de tus huéspedes para una experiencia sin complicaciones.
-            </p>
-          </article>
-          <article class="service-card">
-            <img src="images/icon-maintenance.svg" alt="Mantenimiento y Reparaciones" class="service-card__icon" />
-            <h3 class="service-card__title">Mantenimiento y Reparaciones</h3>
-            <p class="service-card__desc">
-              Mantenemos tu propiedad siempre en perfectas condiciones, como nueva.
-            </p>
-          </article>
+  <section class="services">
+    <div class="container">
+      <h2>What We Do</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Turnover Cleaning</h3>
+          <p>Pristine professional cleaning between every guest.</p>
+        </div>
+        <div class="card">
+          <h3>Staging & Styling</h3>
+          <p>Photoshoot-ready styling for maximum bookings.</p>
+        </div>
+        <div class="card">
+          <h3>Guest Essentials</h3>
+          <p>Linens, toiletries, welcome kits & beyond.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Testimonios slider -->
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <h2 class="section-title">Qué dicen nuestros clientes</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial-slide active">
-            <p class="testimonial-text">“Haven Concierge revolucionó la gestión de mis propiedades. Profesionalismo y calidad garantizados.”</p>
-            <span class="testimonial-author">- María G.</span>
-          </div>
-          <div class="testimonial-slide">
-            <p class="testimonial-text">“Excelente servicio, siempre atentos y super confiables. Mis huéspedes lo notan y lo valoran.”</p>
-            <span class="testimonial-author">- Lucas M.</span>
-          </div>
-          <div class="testimonial-slide">
-            <p class="testimonial-text">“Recomiendo 100%. Cuidan cada detalle y me ahorran tiempo y preocupaciones.”</p>
-            <span class="testimonial-author">- Sofía R.</span>
-          </div>
-          <button class="slider-btn prev" aria-label="Slide anterior">&#10094;</button>
-          <button class="slider-btn next" aria-label="Slide siguiente">&#10095;</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto / CTA final -->
-    <section class="contact" id="contact">
-      <div class="container contact__container">
-        <h2 class="section-title">Solicitá tu presupuesto</h2>
-        <form class="contact-form" action="#" method="POST">
-          <input type="text" name="name" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu correo" required />
-          <input type="tel" name="phone" placeholder="Tu teléfono" required />
-          <textarea name="message" placeholder="Contanos más..." rows="4"></textarea>
-          <button type="submit" class="button button--primary">Enviar</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__container">
-      <p>© 2025 Haven Concierge. Todos los derechos reservados.</p>
     </div>
+  </section>
+
+  <section id="plans" class="pricing">
+    <div class="container">
+      <h2>Our Packages</h2>
+      <div class="grid">
+        <div class="price-card">
+          <h3>Turnover</h3>
+          <p class="price">from $89</p>
+          <ul>
+            <li>Full clean</li>
+            <li>Restock consumables</li>
+            <li>Laundry swap</li>
+          </ul>
+        </div>
+        <div class="price-card featured">
+          <h3>5-Star Experience</h3>
+          <p class="price">from $139</p>
+          <ul>
+            <li>All from Turnover</li>
+            <li>Staging & styling</li>
+            <li>Welcome amenities</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Black Premium</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>Full management</li>
+            <li>Guest comms</li>
+            <li>Tailored concierge</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Haven Concierge – Gold Coast</p>
   </footer>
 
-  <script src="js/slider.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
