@@ -165,7 +165,7 @@ cursor: pointer;
 .service-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
 }
 
