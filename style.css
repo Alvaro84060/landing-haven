@@ -1,25 +1,37 @@
 /* Hero Styles */
 .hero {
-  height: 100vh; /* toda la altura de la ventana */
+  height: 100vh;
   width: 100%;
-  background-image: url('https://freeimage.host/i/F53DOCP');
-  background-size: cover; /* que cubra todo */
+  background-image: url('https://iili.io/F53DOCP.jpg'); /* ✅ LINK DIRECTO A LA IMAGEN */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Overlay para contraste */
+  z-index: 0;
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.55); /* negro semitransparente para dar contraste */
-  z-index: 1;
+  display: none; /* ya no es necesario porque usamos ::after */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 900px;
+  color: #fff;
 }
 
 .hero h1 {
@@ -28,13 +40,15 @@
   line-height: 1.1;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* 👈 Le da más presencia */
 }
 
 .hero p {
   font-weight: 400;
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   margin-bottom: 40px;
-  opacity: 0.9;
+  opacity: 0.92;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn-primary {
@@ -43,17 +57,17 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
-  background: #ff6f3c; /* naranja vibrante premium */
+  background: #ff6f3c;
   border-radius: 40px;
   text-decoration: none;
-  box-shadow: 0 6px 12px rgba(255,111,60,0.5);
+  box-shadow: 0 6px 12px rgba(255, 111, 60, 0.5);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: #e65a2a;
-  box-shadow: 0 8px 16px rgba(230,90,42,0.7);
+  box-shadow: 0 8px 16px rgba(230, 90, 42, 0.7);
   outline: none;
   cursor: pointer;
 }
