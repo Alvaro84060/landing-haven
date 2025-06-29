@@ -3,72 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haven Concierge | Servicio Premium</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <title>Haven Concierge - Servicio Premium de Limpieza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Variables de color */
+    :root {
+      --color-bg: #fafafa;
+      --color-text: #111111;
+      --color-accent: #0055ff;
+      --color-accent-hover: #003bb5;
+      --color-shadow: rgba(0, 0, 0, 0.05);
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    /* Reset minimal */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; padding: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: var(--color-accent-hover);
+    }
+    button {
+      font-family: var(--font-sans);
+      cursor: pointer;
+      border: none;
+      background: var(--color-accent);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.4rem;
+      border-radius: 40px;
+      font-size: 1.15rem;
+      box-shadow: 0 10px 20px var(--color-shadow);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background-color: var(--color-accent-hover);
+      transform: scale(1.05);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* HERO */
+    header.hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      position: relative;
+      color: white;
+      padding: 0 1rem;
+    }
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(17,17,17,0.55);
+      z-index: 0;
+      border-radius: 12px;
+    }
+    header.hero > * {
+      position: relative;
+      z-index: 1;
+    }
+    header.hero h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+    }
+    header.hero p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      max-width: 540px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    /* SECCIONES */
+    section.services {
+      padding: 6rem 0 4rem;
+      background: white;
+      text-align: center;
+    }
+    section.services h2 {
+      font-size: 2.7rem;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+    section.services p.subtitle {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+    }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2.8rem;
+      padding: 0 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #f7f9fc;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 6px 15px var(--color-shadow);
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 12px 28px rgba(0,85,255,0.3);
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .card p {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #eee;
+      margin-top: 5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header.hero h1 {
+        font-size: 2.8rem;
+      }
+      section.services h2 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.8rem 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav container">
-      <a href="#" class="logo">Haven Concierge</a>
-      <ul class="nav-list">
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="#testimonials">Testimonios</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-      <a href="tel:+61712345678" class="btn btn-primary btn-call">Llámanos</a>
-    </nav>
+
+  <header class="hero">
+    <h1>Servicio Premium de Limpieza y Mantenimiento en Gold Coast</h1>
+    <p>Haven Concierge: cuidamos cada detalle para que tu propiedad brille como nunca.</p>
+    <button onclick="location.href='#services'">Descubrí nuestros servicios</button>
   </header>
 
-  <section class="hero container" id="home">
-    <h1>Servicio Concierge Premium en Gold Coast</h1>
-    <p>Atención personalizada y detalles que marcan la diferencia para tus propiedades Airbnb y residenciales.</p>
-    <a href="#contact" class="btn btn-primary btn-cta">Solicitar Presupuesto</a>
-  </section>
-
   <section id="services" class="services container">
-    <h2>Servicios</h2>
-    <div class="services-grid">
-      <article class="service-card">
-        <img src="images/icon-cleaning.svg" alt="Limpieza" />
-        <h3>Limpieza Profesional</h3>
-        <p>Con estándares internacionales y atención premium para que tus propiedades siempre luzcan impecables.</p>
+    <h2>Servicios que marcan la diferencia</h2>
+    <p class="subtitle">Limpieza, mantenimiento y atención integral pensada para clientes exigentes.</p>
+    <div class="service-cards">
+      <article class="card">
+        <h3>Limpieza Airbnb</h3>
+        <p>Turnover rápido y eficiente para que tus huéspedes siempre queden encantados.</p>
       </article>
-      <article class="service-card">
-        <img src="images/icon-maintenance.svg" alt="Mantenimiento" />
-        <h3>Mantenimiento Integral</h3>
-        <p>Soluciones rápidas y efectivas para el cuidado y mejora de tus espacios.</p>
+      <article class="card">
+        <h3>Mantenimiento de Piscinas</h3>
+        <p>Control profesional y cuidado para que tu piscina esté impecable todo el año.</p>
       </article>
-      <article class="service-card">
-        <img src="images/icon-concierge.svg" alt="Concierge" />
-        <h3>Atención Concierge 24/7</h3>
-        <p>Gestión personalizada para la mejor experiencia de tus huéspedes.</p>
+      <article class="card">
+        <h3>Servicios Integrales</h3>
+        <p>Pintura, hidrolavado, barnizado y mucho más para que tu propiedad luzca siempre como nueva.</p>
       </article>
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials container">
-    <h2>Testimonios</h2>
-    <div class="testimonials-slider">
-      <!-- Acá un slider con GSAP o Swiper para testimonios -->
-    </div>
-  </section>
-
-  <section id="contact" class="contact container">
-    <h2>Contacto</h2>
-    <form class="contact-form" action="https://formsubmit.co/tu-email" method="POST">
-      <input type="text" name="name" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu email" required />
-      <textarea name="message" placeholder="Tu mensaje" required></textarea>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-  </section>
-
-  <footer class="footer container">
-    <p>© 2025 Haven Concierge. Todos los derechos reservados.</p>
+  <footer>
+    &copy; 2025 Haven Concierge. Todos los derechos reservados.
   </footer>
+
 </body>
 </html>
-
