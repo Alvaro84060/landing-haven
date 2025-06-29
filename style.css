@@ -314,6 +314,12 @@ html {
 }
 
 .service-card {
-  max-width: 300px; /* en lugar de 340px */
+  flex: 1 1 300px;
+  max-width: 300px;
 }
 
+
+.services {
+  padding-left: 0;
+  padding-right: 0;
+}
