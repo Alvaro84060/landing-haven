@@ -1,53 +1,64 @@
+/* Hero Styles */
 .hero {
   position: relative;
   height: 100vh;
   background: url('https://customhomesonline.com.au/wp-content/uploads/2019/10/Penthouse-for-Sale-Gold-Coast.jpg') center center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
+  align-items: center;
   text-align: center;
+  color: #fff;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
   padding: 0 20px;
-  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.hero .overlay {
+.hero-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* oscurece la imagen para que el texto destaque */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55); /* negro semitransparente para dar contraste */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
   line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .hero p {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin-bottom: 40px;
+  opacity: 0.9;
 }
 
-.cta {
-  background: #ff7f50;
-  color: white;
-  padding: 1rem 2.5rem;
-  font-weight: 700;
+.btn-primary {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: #ff6f3c; /* naranja vibrante premium */
+  border-radius: 40px;
   text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(255,111,60,0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta:hover {
-  background: #ff5a22;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #e65a2a;
+  box-shadow: 0 8px 16px rgba(230,90,42,0.7);
+  outline: none;
+  cursor: pointer;
 }
