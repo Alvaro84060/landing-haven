@@ -1,25 +1,29 @@
-// slider.js
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.testimonial-slider blockquote');
-  let current = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+const btnNext = document.querySelector('.slider-btn.next');
+const btnPrev = document.querySelector('.slider-btn.prev');
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.opacity = i === index ? '1' : '0';
-      slide.style.position = i === index ? 'relative' : 'absolute';
-      slide.style.transition = 'opacity 0.8s ease';
-      slide.style.pointerEvents = i === index ? 'auto' : 'none';
-    });
-  }
+let currentSlide = 0;
 
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+}
 
-  // Inicializo mostrando la primera
-  showSlide(current);
-
-  // Cambio cada 5 segundos
-  setInterval(nextSlide, 5000);
+btnNext.addEventListener('click', () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
 });
+btnPrev.addEventListener('click', () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+});
+
+// Auto-slide cada 8 segundos
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 8000);
+
+// Mostrar slide inicial
+showSlide(currentSlide);
