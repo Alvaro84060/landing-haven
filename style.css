@@ -1,17 +1,12 @@
 /* Hero Styles */
 .hero {
+  height: 100vh; /* toda la altura de la ventana */
+  width: 100%;
+  background-image: url('https://freeimage.host/i/F53DOCP');
+  background-size: cover; /* que cubra todo */
+  background-position: center center;
+  background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
-  background: url('https://freeimage.host/i/F53DOCP') center center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  font-family: 'Poppins', 'Montserrat', sans-serif;
-  padding: 0 20px;
-  overflow: hidden;
-  z-index: 1;
 }
 
 .hero-overlay {
