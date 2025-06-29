@@ -260,4 +260,51 @@ cursor: pointer;
     flex-direction: column;
     align-items: center;
   }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
+
+/* Fade-in reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section divider visual */
+.section-divider {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #111 70%);
+  margin-top: -60px;
+}
+
+/* Card hover highlight */
+.service-card {
+  background-color: #1b1b1b;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(255,111,60,0.35);
+}
+
+/* Subtle border bottom under section titles */
+.section-title {
+  display: inline-block;
+  border-bottom: 3px solid #ff6f3c;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
