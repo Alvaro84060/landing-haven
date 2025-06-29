@@ -79,3 +79,65 @@ body {
   transform: translateY(-3px);
   cursor: pointer;
 }
+.about {
+  background-color: #fefefe;
+  color: #111;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.about .intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+}
+
