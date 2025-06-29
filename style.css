@@ -1,104 +1,344 @@
+/* Importante: Aplica las fuentes */
+More actions
+
 body {
+
+  font-family: 'Lato', sans-serif;
+
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  color: #1a1a1a;
-  background-color: #fff;
+
+  padding: 0;
+
+  color: #fff;
+
+  background-color: #111;
+
 }
 
-/* HERO */
+
+
+/* Hero Styles */
+
 .hero {
+
   height: 100vh;
+
   width: 100%;
-  background-image: url('https://freeimage.host/i/F53DOCP');
+
+  background-image: url('https://sponsor.domain.com.au/sponsor-prod/domain/uploads/2021/10/26222640/A1.2-Living-Web.jpg');
+
   background-size: cover;
+
   background-position: center center;
+
   background-repeat: no-repeat;
+
   position: relative;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   text-align: center;
-  padding: 0 20px;
+
 }
+
+
+
+/* Overlay oscuro */
 
 .hero-overlay {
+
   position: absolute;
+
   top: 0; left: 0; right: 0; bottom: 0;
+
   background: rgba(0, 0, 0, 0.55);
+
   z-index: 1;
+
 }
+
+
+
+/* Contenido del hero */
 
 .hero-content {
+
   position: relative;
+
   z-index: 2;
+
   max-width: 900px;
-  color: white;
+
+  padding: 0 20px;
+
 }
+
+
+
+/* Título principal */
 
 .hero h1 {
+
+  font-family: 'Playfair Display', serif;
+
   font-weight: 700;
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+
   line-height: 1.1;
+
   margin-bottom: 20px;
+
   letter-spacing: 1px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+
 }
+
+
+
+/* Subtítulo */
 
 .hero p {
-  font-weight: 400;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+
+  font-weight: 300;
+
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+
   margin-bottom: 40px;
+
   opacity: 0.95;
+
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+
 }
+
+
+
+/* Botón */
 
 .btn-primary {
+
   display: inline-block;
+
   padding: 18px 45px;
+
   font-size: 1.2rem;
+
   font-weight: 600;
+
   color: #fff;
+
   background: #ff6f3c;
+
   border-radius: 40px;
+
   text-decoration: none;
+
   box-shadow: 0 6px 12px rgba(255,111,60,0.5);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  transition: all 0.3s ease-in-out;
+
 }
+
+
 
 .btn-primary:hover,
+
 .btn-primary:focus {
+
   background-color: #e65a2a;
-  box-shadow: 0 8px 16px rgba(230,90,42,0.7);
-  outline: none;
+
+  box-shadow: 0 8px 20px rgba(230,90,42,0.7);
+
+  transform: translateY(-3px);
+
   cursor: pointer;
+
 }
 
-/* SECTION: TAILORED AIRBNB SOLUTIONS */
-.section-background {
-  background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+.about {
+
   background-color: #fefefe;
-  background-size: auto;
-  background-repeat: repeat;
-  background-position: center;
-  padding: 100px 20px;
+
+  color: #111;
+
+  padding: 80px 20px;
+
   text-align: center;
+
 }
 
-.section-container {
-  max-width: 950px;
-  margin: 0 auto;
-}
 
-.section-title {
-  font-size: 2.6rem;
-  font-weight: 700;
+
+.about h2 {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 3rem;
+
   margin-bottom: 30px;
-  color: #1a1a1a;
+
+  color: #111;
+
 }
 
-.section-subtitle {
-  font-size: 1.3rem;
-  font-weight: 400;
+
+
+.about .intro {
+
+  font-size: 1.2rem;
+
+  max-width: 800px;
+
+  margin: 0 auto 60px;
+
+  font-weight: 300;
+
+  line-height: 1.6;
+
+}
+
+
+
+.features {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 40px;
+
+}
+
+
+
+.feature {
+
+  flex: 1 1 250px;
+
+  max-width: 300px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+
+  transition: transform 0.3s ease;
+
+}
+
+
+
+.feature:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+
+.feature img {
+
+  width: 64px;
+
+  height: 64px;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.feature h3 {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 1.4rem;
+
+  margin-bottom: 10px;
+
+  color: #222;
+
+}
+
+
+
+.feature p {
+
+  font-size: 1rem;
+
+  font-weight: 300;
+
+  color: #555;
+
+}
+
+.about-section {
+
+  background-color: #f8f6f2;
+
+  /* Optional texture */
+
+  /* background-image: url('/assets/textures/lino-pattern.svg'); */
+
+  /* background-repeat: repeat; */
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+}
+
+
+
+.about-section h2 {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+
+  color: #222;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.about-section .lead {
+
+  font-size: 1.4rem;
+
+  font-weight: 500;
+
+  margin-bottom: 30px;
+
+  color: #444;
+
+}
+
+
+
+.about-section p {
+
+  font-size: 1.1rem;
+
+  color: #555;
+
+  max-width: 800px;
+
+  margin: 0 auto 20px;
+
   line-height: 1.7;
-  margin-bottom: 25px;
-  color: #3c3c3c;
+
 }
