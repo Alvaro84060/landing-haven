@@ -2,50 +2,84 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Haven Concierge</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haven Concierge - Servicios Premium en Gold Coast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Fuentes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Haven Concierge</h1>
-      <p>Servicios de limpieza y gestión premium para propiedades en Gold Coast</p>
-      <a href="#contacto" class="cta-button">Solicitar Servicio</a>
-    </div>
-  </header>
 
-  <section class="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="servicio">
-      <h3>Limpieza Profesional</h3>
-      <p>Detalle de servicio.</p>
-    </div>
-    <div class="servicio">
-      <h3>Reposición de Amenities</h3>
-      <p>Detalle de servicio.</p>
-    </div>
-    <div class="servicio">
-      <h3>Gestión de Huéspedes</h3>
-      <p>Detalle de servicio.</p>
-    </div>
-  </section>
+<header class="header">
+  <nav class="nav container">
+    <a href="#" class="logo">Haven Concierge</a>
+    <ul class="nav__list">
+      <li><a href="#services" class="nav__link">Servicios</a></li>
+      <li><a href="#testimonials" class="nav__link">Testimonios</a></li>
+      <li><a href="#contact" class="nav__link btn btn--primary">Contactar</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="testimonios">
-    <h2>Testimonios</h2>
-    <blockquote>
-      "Servicio excepcional y atención al detalle. Altamente recomendado."
-      <cite>- Cliente Satisfecho</cite>
-    </blockquote>
-  </section>
+<section class="hero">
+  <div class="hero__content container">
+    <h1 class="hero__title">Limpieza y Atención Premium para Propiedades en Gold Coast</h1>
+    <p class="hero__subtitle">Convierta su propiedad en un oasis para sus huéspedes con Haven Concierge.</p>
+    <a href="#contact" class="btn btn--primary btn--large">Solicitar Servicio</a>
+  </div>
+</section>
 
-  <section id="contacto" class="cta-final">
-    <h2>¿Listo para elevar tu propiedad al siguiente nivel?</h2>
-    <a href="mailto:contacto@havenconcierge.com" class="cta-button">Contáctanos</a>
-  </section>
+<!-- Sección Servicios -->
+<section id="services" class="services container">
+  <h2 class="section-title">Nuestros Servicios</h2>
+  <div class="services__grid">
+    <article class="service-card">
+      <img src="images/cleaning.svg" alt="Limpieza Profesional" class="service-card__icon" />
+      <h3 class="service-card__title">Limpieza Profesional</h3>
+      <p>Servicios integrales para que su propiedad esté impecable y lista para recibir huéspedes.</p>
+    </article>
+    <article class="service-card">
+      <img src="images/concierge.svg" alt="Atención al Huésped" class="service-card__icon" />
+      <h3 class="service-card__title">Atención al Huésped</h3>
+      <p>Gestión de check-in, atención personalizada y soporte 24/7 para sus huéspedes.</p>
+    </article>
+    <article class="service-card">
+      <img src="images/maintenance.svg" alt="Mantenimiento y Reparaciones" class="service-card__icon" />
+      <h3 class="service-card__title">Mantenimiento y Reparaciones</h3>
+      <p>Mantenimiento preventivo y soluciones rápidas para que todo funcione perfecto.</p>
+    </article>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Haven Concierge. Todos los derechos reservados.</p>
-  </footer>
+<!-- Testimonios -->
+<section id="testimonials" class="testimonials container">
+  <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+  <blockquote class="testimonial">
+    <p>"Haven Concierge transformó la experiencia de mis huéspedes. Son profesionales y atentos en cada detalle."</p>
+    <footer>- Laura M.</footer>
+  </blockquote>
+  <blockquote class="testimonial">
+    <p>"Confío en Haven para mantener mis propiedades siempre impecables. Un servicio de primer nivel."</p>
+    <footer>- Carlos T.</footer>
+  </blockquote>
+</section>
+
+<!-- Contacto -->
+<section id="contact" class="contact container">
+  <h2 class="section-title">Contactanos</h2>
+  <form action="#" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Nombre completo" required />
+    <input type="email" name="email" placeholder="Correo electrónico" required />
+    <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+    <button type="submit" class="btn btn--primary btn--large">Enviar</button>
+  </form>
+</section>
+
+<footer class="footer container">
+  <p>© 2025 Haven Concierge. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
