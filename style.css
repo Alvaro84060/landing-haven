@@ -308,4 +308,12 @@ html {
   margin-bottom: 30px;
   font-family: 'Playfair Display', serif;
 }
+.services .container {
+  max-width: 1240px; /* antes estaba en 1200px */
+  margin: 0 auto;
+}
+
+.service-card {
+  max-width: 300px; /* en lugar de 340px */
+}
 
