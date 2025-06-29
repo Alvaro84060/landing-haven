@@ -3,83 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haven Concierge - Servicios Premium en Gold Coast</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Fuentes elegantes -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Haven Concierge | Servicio Premium</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Haven Concierge</a>
+      <ul class="nav-list">
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <a href="tel:+61712345678" class="btn btn-primary btn-call">Llámanos</a>
+    </nav>
+  </header>
 
-<header class="header">
-  <nav class="nav container">
-    <a href="#" class="logo">Haven Concierge</a>
-    <ul class="nav__list">
-      <li><a href="#services" class="nav__link">Servicios</a></li>
-      <li><a href="#testimonials" class="nav__link">Testimonios</a></li>
-      <li><a href="#contact" class="nav__link btn btn--primary">Contactar</a></li>
-    </ul>
-  </nav>
-</header>
+  <section class="hero container" id="home">
+    <h1>Servicio Concierge Premium en Gold Coast</h1>
+    <p>Atención personalizada y detalles que marcan la diferencia para tus propiedades Airbnb y residenciales.</p>
+    <a href="#contact" class="btn btn-primary btn-cta">Solicitar Presupuesto</a>
+  </section>
 
-<section class="hero">
-  <div class="hero__content container">
-    <h1 class="hero__title">Limpieza y Atención Premium para Propiedades en Gold Coast</h1>
-    <p class="hero__subtitle">Convierta su propiedad en un oasis para sus huéspedes con Haven Concierge.</p>
-    <a href="#contact" class="btn btn--primary btn--large">Solicitar Servicio</a>
-  </div>
-</section>
+  <section id="services" class="services container">
+    <h2>Servicios</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <img src="images/icon-cleaning.svg" alt="Limpieza" />
+        <h3>Limpieza Profesional</h3>
+        <p>Con estándares internacionales y atención premium para que tus propiedades siempre luzcan impecables.</p>
+      </article>
+      <article class="service-card">
+        <img src="images/icon-maintenance.svg" alt="Mantenimiento" />
+        <h3>Mantenimiento Integral</h3>
+        <p>Soluciones rápidas y efectivas para el cuidado y mejora de tus espacios.</p>
+      </article>
+      <article class="service-card">
+        <img src="images/icon-concierge.svg" alt="Concierge" />
+        <h3>Atención Concierge 24/7</h3>
+        <p>Gestión personalizada para la mejor experiencia de tus huéspedes.</p>
+      </article>
+    </div>
+  </section>
 
-<!-- Sección Servicios -->
-<section id="services" class="services container">
-  <h2 class="section-title">Nuestros Servicios</h2>
-  <div class="services__grid">
-    <article class="service-card">
-      <img src="images/cleaning.svg" alt="Limpieza Profesional" class="service-card__icon" />
-      <h3 class="service-card__title">Limpieza Profesional</h3>
-      <p>Servicios integrales para que su propiedad esté impecable y lista para recibir huéspedes.</p>
-    </article>
-    <article class="service-card">
-      <img src="images/concierge.svg" alt="Atención al Huésped" class="service-card__icon" />
-      <h3 class="service-card__title">Atención al Huésped</h3>
-      <p>Gestión de check-in, atención personalizada y soporte 24/7 para sus huéspedes.</p>
-    </article>
-    <article class="service-card">
-      <img src="images/maintenance.svg" alt="Mantenimiento y Reparaciones" class="service-card__icon" />
-      <h3 class="service-card__title">Mantenimiento y Reparaciones</h3>
-      <p>Mantenimiento preventivo y soluciones rápidas para que todo funcione perfecto.</p>
-    </article>
-  </div>
-</section>
+  <section id="testimonials" class="testimonials container">
+    <h2>Testimonios</h2>
+    <div class="testimonials-slider">
+      <!-- Acá un slider con GSAP o Swiper para testimonios -->
+    </div>
+  </section>
 
-<!-- Testimonios -->
-<section id="testimonials" class="testimonials container">
-  <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-  <blockquote class="testimonial">
-    <p>"Haven Concierge transformó la experiencia de mis huéspedes. Son profesionales y atentos en cada detalle."</p>
-    <footer>- Laura M.</footer>
-  </blockquote>
-  <blockquote class="testimonial">
-    <p>"Confío en Haven para mantener mis propiedades siempre impecables. Un servicio de primer nivel."</p>
-    <footer>- Carlos T.</footer>
-  </blockquote>
-</section>
+  <section id="contact" class="contact container">
+    <h2>Contacto</h2>
+    <form class="contact-form" action="https://formsubmit.co/tu-email" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu email" required />
+      <textarea name="message" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </section>
 
-<!-- Contacto -->
-<section id="contact" class="contact container">
-  <h2 class="section-title">Contactanos</h2>
-  <form action="#" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Nombre completo" required />
-    <input type="email" name="email" placeholder="Correo electrónico" required />
-    <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-    <button type="submit" class="btn btn--primary btn--large">Enviar</button>
-  </form>
-</section>
-
-<footer class="footer container">
-  <p>© 2025 Haven Concierge. Todos los derechos reservados.</p>
-</footer>
-
+  <footer class="footer container">
+    <p>© 2025 Haven Concierge. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
+
