@@ -141,7 +141,7 @@ cursor: pointer;
 }
 
 .services .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -312,14 +312,19 @@ html {
   max-width: 1240px; /* antes estaba en 1200px */
   margin: 0 auto;
 }
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
 .service-card {
   flex: 1 1 300px;
   max-width: 300px;
-}
-
-
-.services {
-  padding-left: 0;
-  padding-right: 0;
+  background-color: #1b1b1b;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
