@@ -94,3 +94,43 @@ form.addEventListener('submit', e => {
   quoteResult.classList.add('visible');
 });
 
+// Contact form submission
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const feedback = document.getElementById('contact-feedback');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, phone, message })
+      });
+
+      let data;
+      try {
+        data = await res.json();
+      } catch (err) {
+        throw new Error("Server did not return valid JSON");
+      }
+
+      if (!res.ok) throw new Error(data.message || 'Something went wrong');
+
+      feedback.textContent = 'Your message has been sent. We will get back to you shortly!';
+      feedback.style.color = '#4CAF50';
+      contactForm.reset();
+    } catch (error) {
+      feedback.textContent = error.message || 'Failed to send message.';
+      feedback.style.color = '#f44336';
+    }
+  });
+}
