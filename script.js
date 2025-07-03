@@ -116,12 +116,14 @@ if (contactForm) {
         body: JSON.stringify({ name, email, phone, message })
       });
 
-      let data;
-      try {
-        data = await res.json();
-      } catch (err) {
-        throw new Error("Server did not return valid JSON");
-      }
+     let data;
+const text = await res.text();
+
+try {
+  data = JSON.parse(text);
+} catch (err) {
+  throw new Error('Server returned invalid response: ' + text);
+}
 
       if (!res.ok) throw new Error(data.message || 'Something went wrong');
 
